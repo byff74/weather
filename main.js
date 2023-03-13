@@ -5,7 +5,7 @@ async function search() {
     const image = document.querySelector('.weather-box img');
     let api_key = '923b21fa48484346a9444022220806'
     let city = document.querySelector('.input').value;
-    let url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${city}&lang=ru&aqi=yes`;
+    let url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${city}&lang=ru&aqi=yes`;
     let res = await fetch(url);
     let data = await res.json();
     document.querySelector('.description').innerHTML = data['current']['condition']['text'];
